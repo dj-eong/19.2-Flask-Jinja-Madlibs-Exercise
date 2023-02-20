@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Sadlibs{% endblock %}
+
+{% block content %}
+<h1>Sadlibs!</h1>
+<p>Pick a story to write:</p>
+<form action="/form">
+    <select name="stories" id="">
+        <option value="story1">Story 1</option>
+        <option value="story2">Story 2</option>
+    </select>
+    <button>Submit</button>
+</form>
+{% endblock %}

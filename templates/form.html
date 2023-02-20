@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Sadlibs! Story Prompt{% endblock %}
+
+{% block content %}
+<h1>Write Your Story</h1>
+<form action="/story" method="POST">
+    {% for word in story.prompts %}
+    <p>
+        <label for={{word}}>{{word}}:</label>
+        <input type="text" name={{word}} id={{word}}>
+    </p>
+    {% endfor %}
+    <input type="hidden" name="story_id" value={{story_id}}>
+    <button>Submit</button>
+</form>
+{% endblock %}
